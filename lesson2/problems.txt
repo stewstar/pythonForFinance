@@ -1,0 +1,55 @@
+Python exercies:
+
+#----------------------------------------#
+Question 1
+
+Question:
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Suppose the following input is supplied to the program:
+hello world and practice makes perfect and hello world again
+Then, the output should be:
+again and hello makes perfect practice world
+
+#----------------------------------------#
+
+#----------------------------------------#
+Question 2
+
+Question:
+Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+Example:
+0100,0011,1010,1001
+Then the output should be:
+1010
+Notes: Assume the data is input by console.
+
+#----------------------------------------#
+
+#----------------------------------------#
+Question 3
+Level 2
+
+Question:
+Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+Suppose the following input is supplied to the program:
+Hello world!
+Then, the output should be:
+UPPER CASE 1
+LOWER CASE 9
+
+#----------------------------------------#
+
+
+
+
+Numpy exercises:
+1. Create a null vector of size 10 but the fifth value which is 1
+2. Create a vector with values ranging from 10 to 49 
+3. Reverse a vector (first element becomes last) 
+4. Create a 3x3 matrix with values ranging from 0 to 8 
+5. Find indices of non-zero elements from [1,2,0,0,4,0] 
+6. Create a 3x3 identity matrix 
+7. Create a 3x3x3 array with random values 
+8. Create a 10x10 array with random values and find the minimum and maximum values 
+9. Create a random vector of size 30 and find the mean value 
+10. Create a 2d array with 1 on the border and 0 inside 
