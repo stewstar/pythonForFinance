@@ -1,0 +1,44 @@
+python problems:
+1. Write a program that asks the user for a long string containing multiple words. 
+Print back to the user the same string, except with the words in backwards order. 
+For example, say I type the string:
+
+My name is Steven
+
+Then I would see the string:
+
+Steven is name My
+
+shown back to me.
+
+2. Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, 
+then tell them whether they guessed too low, too high, or exactly right. 
+Extras:
+
+Keep the game going until the user types “exit”
+Keep track of how many guesses the user has taken, and when the game ends, print this out.
+
+
+
+Numpy:
+
+1. How to add a border (filled with 0's) around an existing array?
+2. Create a 5x5 matrix with values 1,2,3,4 just below the diagonal  
+3. Create a 8x8 matrix and fill it with a checkerboard pattern 
+4. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element 
+5. Create a checkerboard 8x8 matrix using the tile function
+6. How to add a border (filled with 0's) around an existing array? 
+7. What is the result of the following expression? 
+8. Create a 5x5 matrix with values 1,2,3,4 just below the diagonal 
+9. Create a 8x8 matrix and fill it with a checkerboard pattern 
+10. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element?
+11. Create a checkerboard 8x8 matrix using the tile function 
+12. Normalize a 5x5 random matrix 
+13. Create a custom dtype that describes a color as four unsigned bytes (RGBA) 
+14. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) 
+15. Given a 1D array, negate all elements which are between 3 and 8, in place.
+16. How to get all the dates corresponding to the month of July 2016?
+17. Consider two random array A and B, check if they are equal
+18. How to convert a float (32 bits) array into an integer (32 bits) in place?
+19. Compute a matrix rank?
+20. How to get the n largest values of an array?
