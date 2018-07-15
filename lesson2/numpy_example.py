@@ -19,8 +19,6 @@ def get_details(narr):
     print("ndarray dtype: ", narr.dtype)
     print("ndarray itmesize: ", narr.itemsize)
     print()
-    
-
 
 # some basic examples
 
