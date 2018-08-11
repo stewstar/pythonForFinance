@@ -1,0 +1,57 @@
+8 steps
+
+1. who are users
+2. use cases
+3. abstracted business flow (e.g. BPMN)
+4. concreted tech solution -> tech stack for each flow node (POC, principle)
+5. tech design details -> E-R diagram, class hierarchy
+6. interface design
+7. POC (demo) and coding (unit testing, refactor)
+8. end to end testing (e.g. UAT)
+
+1>2>3>4>....>8
+
+first 3 years
+(5)678
+first 3-5 years
+(3)4
+> 5 years
+2-6
+
+
+
+Project - design simple trading research platform
+1.  research ppl (R) -> strategy making
+	business decision maker (B) -> UI for factors
+
+2.  (1) (B) can see a list of strategy(portfolio)
+	e.g. * simple all in -> 10 stcoks, 10% each 
+	(2) select one portfolio, it can display all current equities and % in it
+	e.g. * APPL 5%
+		 * GOOG 5%
+		 ...
+		 total investment : 20,000
+	(3) multiple financial index (past and current)
+		performance factors and results
+		risk factors
+	(4) (nice to have) 
+		-> compare two strategies
+		-> able to change stock and %
+	
+	important:
+	(5) (R) needs API for data, test (3) values, upload strategy,
+
+	(6) strategy can refresh T-1 for trade days to pick/drop stocks and current stats.
+
+example: https://processon.com/diagraming/5b6efbb2e4b0555b39dea12d
+
+3.	Python -> Flask -> pgsql / mongoDB  
+	cache?
+	messaging queue?
+	distributed?
+	external storage?
+	cloud?
+	......
+
+4. 
+
