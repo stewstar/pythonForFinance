@@ -1,0 +1,147 @@
+8 steps
+
+1. who are users
+2. use cases
+3. abstracted business flow (e.g. BPMN)
+4. concreted tech solution -> tech stack for each flow node (POC, principle)
+5. tech design details -> E-R diagram, class hierarchy (UML)
+6. interface design
+7. POC (demo) and coding (unit testing, refactor)
+8. end to end testing (e.g. UAT)
+
+1>2>3>4>....>8
+
+first 3 years
+(5)678
+first 3-5 years
+(3)4
+> 5 years
+2-6
+
+
+
+Project - design simple trading research platform
+1.  research ppl (R) -> strategy making
+	business decision maker (B) -> UI for factors
+
+2.  (1) (B) can see a list of strategy(portfolio)
+	e.g. * simple all in -> 10 stcoks, 10% each 
+	(2) select one portfolio, it can display all current equities and % in it
+	e.g. * APPL 5%
+		 * GOOG 5%
+		 ...
+		 total investment : 20,000
+	(3) multiple financial index (past and current)
+		performance factors and results
+		risk factors
+	(4) (nice to have) 
+		-> compare two strategies
+		-> able to change stock and %
+	
+	important:
+	(5) (R) needs API for data, test (3) values, upload strategy,
+
+	(6) strategy can refresh T-1 for trade days to pick/drop stocks and current stats.
+
+3.  https://processon.com/diagraming/5b6efbb2e4b0555b39dea12d
+
+4.	Python -> Flask -> pgsql / mongoDB  
+	cache?
+	messaging queue?
+	distributed?
+	external storage?
+	cloud?
+	......
+
+5.	E-R:
+	Entity Relation Diagram
+
+
+	stock, strategy, exchange(fee?), rule, result 
+
+
+	use strategy_pool;
+
+	CREATE TABLE stock(
+		id VARCHAR(255),
+		name VARCHAR(255) NOT NULL,
+		status TINYINT NOT NULL COMMENT "0 for... 1 for... 2 for...",
+		PRIMARY KEY(id)
+	)
+
+	{"id": 1, "name":"name1"...}
+
+	CREATE TABLE strategy(
+		id SERIAL,
+		name VARCHAR(255) NOT NULL,
+		status TINYINT NOT NULL COMMENT "",
+		content JSONB NOT NULL,
+		PRIMARY KEY(id)
+	)
+
+	CREATE TABLE strategy_stocks(
+		id SERIAL,
+		strategy_id INT NOT NULL,
+		stock_id VARCHAR(255) NOT NULL,
+		PRIMARY KEY(id),
+		FOREIGN KEY(strategy_id) REFERENCES strategy(id),
+		FOREIGN KEY(stock_id) REFERENCES stock(id)
+	)
+
+	CREATE TABLE stock_price(
+		id SERIAL,
+		stock_id VARCHAR(255) NOT NULL,
+		...,
+		PRIMARY KEY(id),
+		FOREIGN KEY(stock_id) REFERENCES stock(id)
+	)
+
+	CREATE TABLE exchange() 
+
+	CREATE TABLE stock_exchanges()
+
+	CREATE TABLE performance()
+
+	CREATE TABLE strategy_perf_list()
+
+	OOD:
+
+	https://www.cnblogs.com/feeland/p/4419121.html
+
+	UML: http://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html
+
+	100 / 500
+	print_title(self, name)
+	name -> string, int, bz_class
+
+	private void printTitle(bz name) 
+	bz_class1 bz_class2
+	interface -> bz
+	bz_class1 implements bz...
+	bz_class2 implements bz...
+
+	private void printTitle(Object name)
+
+6.  API interface:
+	modules interacte with each other
+
+	system1 -> system2
+	GET /api2/all-stocks 
+	[(obj) stock]
+
+	POST /api2/stock
+	params {(obj) stock}
+	[boolean / error]
+
+	system1 Program interfaces:
+	(class function?
+	function naming
+	input naming)
+
+	class strategy 
+		get_name:...
+		...
+		get_stocks(name): return self.stocks
+	
+
+
