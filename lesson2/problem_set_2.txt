@@ -42,3 +42,71 @@ Numpy:
 18. How to convert a float (32 bits) array into an integer (32 bits) in place?
 19. Compute a matrix rank?
 20. How to get the n largest values of an array?
+
+
+
+
+
+'''
+def factorial(x):
+    if x <= 0:
+        return 1
+    # ....
+    # 。。。。
+    return x * factorial(x - 1)
+
+print(factorial(8))
+print(factorial(16))
+print(factorial(1))
+print(factorial(0))
+print(factorial(-6))
+'''
+
+'''
+Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, 
+then tell them whether they guessed too low, too high, or exactly right. 
+Extras:
+
+Keep the game going until the user types “exit”
+Keep track of how many guesses the user has taken, and when the game ends, print this out.
+'''
+
+'''
+analysis:
+    (1) generate random number
+    
+    import random
+    random.randint(1, 10)
+    
+    (2) compare use if-elif-else
+    ...
+    (3) while-loop
+    while(?) :
+        ...
+    (4) type 'exit' and end wile-loop
+    #input("enter a number") == "exit"
+'''
+
+import random
+
+generated = random.randint(1, 10) # random [1, 9]
+
+while(True):
+    user_input = input("please enter an int (or exit): ")
+
+    if user_input == "exit":
+        print("thank you!")
+        break
+    
+    guess = int(user_input)
+
+    if guess > generated:
+        print("guessed too high")
+    elif guess < generated:
+        print("guessed too low")
+    else:
+        print("exactly right ", generated)
+        break
+
+# https://github.com/google/styleguide/blob/gh-pages/pyguide.md
+
